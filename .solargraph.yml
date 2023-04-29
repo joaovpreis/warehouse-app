@@ -1,0 +1,14 @@
+include:
+- "**/*.rb"
+exclude:
+- vendor/**/*
+- ".bundle/**/*"
+require: []
+domains: []
+reporters:
+- rubocop
+require_paths: []
+max_files: 5000include:
+  - "**/*.rb"
+reporters:
+  - rubocop
