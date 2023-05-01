@@ -15,9 +15,10 @@ class WarehousesController < ApplicationController
     @warehouse = Warehouse.new warehouse_params
 
     if @warehouse.save
-      redirect_to root_path and return
+      redirect_to root_path, notice: 'Galpão cadastrado com sucesso!' and return
     end
 
+    flash.now[:notice] = 'O Galpão não foi cadastrado!' 
     render 'new'
 
   end
