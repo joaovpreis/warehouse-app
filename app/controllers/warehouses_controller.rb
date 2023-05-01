@@ -23,6 +23,22 @@ class WarehousesController < ApplicationController
 
   end
 
+  def edit
+    @warehouse = Warehouse.find params[:id]
+  end
+
+  def update
+    @warehouse = Warehouse.find params[:id]
+
+    if @warehouse.update warehouse_params
+      redirect_to warehouse_path(@warehouse.id), notice: 'Galpão atualizado com sucesso!'
+    end
+
+    flash.now[:notice] = 'O Galpão não foi atualizado!' 
+    render 'edit'
+  end
+
+  private
   def warehouse_params 
     params.require(:warehouse).permit(:name, :code, :city, :area, :cep, :address, :description)
   end

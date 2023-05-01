@@ -11,7 +11,7 @@ describe 'Usuario acessa o formulário de cadastro de um novo armazém' do
     expect(page).to have_field('CEP')
     expect(page).to have_field('Endereço')
     expect(page).to have_field('Descrição')
-    expect(page).to have_button('Cadastrar Galpão')
+    expect(page).to have_button('Criar Galpão')
   end
 
   it 'e cadastra um armazém com sucesso' do
@@ -24,7 +24,7 @@ describe 'Usuario acessa o formulário de cadastro de um novo armazém' do
     fill_in 'CEP',	with: '25000-320'
     fill_in 'Endereço',	with: 'Avenida Brasil, 1500'
     fill_in 'Descrição',	with: 'Galpao privado do aeroporto Santos Dumont'
-    click_on 'Cadastrar Galpão'
+    click_on 'Criar Galpão'
 
     expect(page).to have_content('Galpão cadastrado com sucesso!') 
     expect(page).to have_current_path(root_path) 
@@ -40,7 +40,7 @@ describe 'Usuario acessa o formulário de cadastro de um novo armazém' do
     fill_in 'Cidade',	with: 'Rio de Janeiro'
     fill_in 'CEP',	with: '25000-320'
     fill_in 'Descrição',	with: 'Galpao privado do aeroporto Santos Dumont'
-    click_on 'Cadastrar Galpão'
+    click_on 'Criar Galpão'
 
 
     expect(page).to have_content('O Galpão não foi cadastrado!')
