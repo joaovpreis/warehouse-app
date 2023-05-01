@@ -9,5 +9,11 @@
   <p>Descrição: <%= @warehouse.description %> m2</p>
 </div>
 
-<%= link_to 'Voltar', root_path %>
+<div>
+  <%= link_to 'Editar', edit_warehouse_path(@warehouse.id) %>
+  <%= button_to 'Deletar', warehouse_path(@warehouse.id), method: :delete %>
+</div>
+<div>
+  <%= link_to 'Voltar', root_path %>
+</div>
 </main>

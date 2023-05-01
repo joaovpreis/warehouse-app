@@ -19,7 +19,7 @@ describe 'Usuario acessa os detalhes do galpão' do
     expect(page).to have_content('Descrição: Galpao privado do aeroporto Santos Dumont')
   end
 
-  it "e retorna à página principal" do
+  it 'e retorna à página principal' do
     Warehouse.create!(name: 'Aeroporto Rio', code: 'SDU', city: 'Rio de Janeiro', area: 200_000,
       address: 'Avenida Brasil, 1500', cep: '25000-320',
       description: 'Galpao privado do aeroporto Santos Dumont')

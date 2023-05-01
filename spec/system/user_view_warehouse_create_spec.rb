@@ -33,7 +33,7 @@ describe 'Usuario acessa o formulário de cadastro de um novo armazém' do
     expect(page).to have_content('Área: 300000 m2')
   end
 
-  it "e insere informações incorretamente" do
+  it 'e insere informações incorretamente' do
     visit new_warehouse_path
 
     fill_in 'Código',	with: 'SDU'
