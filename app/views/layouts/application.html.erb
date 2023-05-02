@@ -10,11 +10,19 @@
   </head>
 
   <body>
-    <% if flash.any? %>
+
+    <h1>Galpões e Estoques<h1>
+    <nav>
+      <%= link_to 'Fornecedores',root_path %>
+    <nav>
+    <% if notice %>
       <div>
-        <% flash.each do |type, msg|  %>
-          <%= msg %>
-        <% end  %>
+        <%= notice %>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div>
+        <%= alert %>
       </div>
     <% end %>
     <%= yield %>
