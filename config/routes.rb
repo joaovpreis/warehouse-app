@@ -3,4 +3,5 @@
 
   root 'warehouses#index'
   resources :warehouses, only:[:show, :new, :create, :edit, :update, :destroy]
+  resources :suppliers, only:[:index]
 end
